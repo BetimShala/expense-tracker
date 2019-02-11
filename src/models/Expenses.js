@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const monthlyExpensesSchema = mongoose.Schema({
+const ExpensesSchema = mongoose.Schema({
     year: Number,
     month: Number,
     day_hour: Date,
@@ -8,4 +8,4 @@ const monthlyExpensesSchema = mongoose.Schema({
     cost: Number
 })
 
-module.exports = mongoose.model('MonthlyExpenses', monthlyExpensesSchema)
+module.exports = mongoose.model('Expenses', ExpensesSchema)

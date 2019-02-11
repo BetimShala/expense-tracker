@@ -1,51 +1,51 @@
-const monthlyIncomesController = require('../controllers/monthlyIncomesController')
-const monthlyExpensesController = require('../controllers/monthlyExpensesController')
+const incomesController = require('../controllers/IncomesController')
+const expensesController = require('../controllers/ExpensesController')
 const routes = [
   {
     method: 'GET',
-    url: '/api/monthlyIncomes',
-    handler: monthlyIncomesController.getMonthlyIncomes
+    url: '/api/incomes',
+    handler: incomesController.getIncomes
   },
   {
     method: 'POST',
-    url: '/api/monthlyIncomes',
-    handler: monthlyIncomesController.addMonthlyIncome,
+    url: '/api/incomes',
+    handler: incomesController.addIncome,
   },
   {
     method: 'PUT',
-    url: '/api/monthlyIncomes/:id',
-    handler: monthlyIncomesController.updateMonthlyIncome
+    url: '/api/incomes/:id',
+    handler: incomesController.updateIncome
   },
   {
     method: 'DELETE',
-    url: '/api/monthlyIncomes/:id',
-    handler: monthlyIncomesController.deleteMonthlyIncome
+    url: '/api/incomes/:id',
+    handler: incomesController.deleteIncome
   },
   {
     method: 'GET',
-    url: '/api/monthlyExpenses',
-    handler: monthlyExpensesController.getMonthlyExpenses
+    url: '/api/expenses',
+    handler: expensesController.getExpenses
   },
   {
       method: 'GET',
       url: '/api/expenses/year/:year/month/:month',
-      handler: monthlyExpensesController.getExpensesByYearAndMonth
+      handler: expensesController.getExpensesByYearAndMonth
   },
   {
       method: 'POST',
-      url: '/api/monthlyExpenses',
-      handler: monthlyExpensesController.addMonthlyExpense
+      url: '/api/expenses',
+      handler: expensesController.addExpense
   },
   {
     method: 'PUT',
-    url: '/api/monthlyExpenses/:id',
-    handler: monthlyExpensesController.updateMonthlyExpense
+    url: '/api/expenses/:id',
+    handler: expensesController.updateExpense
 
   },
   {
     method: 'DELETE',
-    url: '/api/monthlyExpenses/:id',
-    handler: monthlyExpensesController.deleteMonthlyExpense
+    url: '/api/expenses/:id',
+    handler: expensesController.deleteExpense
   }
 ]
 
